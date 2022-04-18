@@ -10,8 +10,13 @@ import { GifsService } from 'src/app/gifs/services/gifs.service';
 export class SidebarComponent{
 
   get obtenerHistorial(){
-    return this.gifsService.historial
+    return this.gifsService.historial;
   }
+  
+  buscar(termino:string){
+    this.gifsService.buscarGifs(termino);
+  }
+
   constructor(private gifsService:GifsService){}
   }
 
